@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: weba11y-server
+  r2dbc:
+    url: ${R2DBC_URL}
+    username: ${R2DBC_USERNAME}
+    password: ${R2DBC_PASSWORD}
+    pool:
+      max-size: 20
+      min-size: 1
+      initial-size: 1
+
+## Logging
+logging:
+  level:
+    io.r2dbc: debug
+    org:
+      springframework:
+        cache: debug
+      hibernate:
+        sql: debug
+        type: trace
